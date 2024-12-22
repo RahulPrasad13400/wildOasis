@@ -1,5 +1,7 @@
-import { formatDistance, parseISO } from 'date-fns';
-import { differenceInDays } from 'date-fns/esm';
+import { formatDistance, parseISO, format } from 'date-fns';
+import { format } from 'date-fns';  // This should work in most cases
+import { format } from 'date-fns/esm';  // This could be problematic in some setups
+import { differenceInDays, format } from 'date-fns/esm';
 
 // We want to make this function work for both Date objects and strings (which come from Supabase)
 export const subtractDates = (dateStr1, dateStr2) =>
