@@ -5,22 +5,23 @@ import Modal from "../../ui/Modal"
 import CabinTable from "./CabinTable"
 
 export default function AddCabin(){
-  return <Modal>
-    <Modal.Open opens="cabin-form">
-    <Button>Add new Cabin</Button>
-    </Modal.Open>
-    <Modal.Window name="cabin-form">
-      <CreateCabinForm />
-    </Modal.Window>
-
-    <Modal.Open opens="table">
-    <Button>Table</Button>
-    </Modal.Open>
-    <Modal.Window name="table">
-    </Modal.Window> */}
-      <CabinTable />
-    </Modal.Window>
-  </Modal>
+  return <div>
+      <Modal>
+        <Modal.Open opens="cabin-form">
+        <Button>Add new Cabin</Button>
+        </Modal.Open>
+        <Modal.Window name="cabin-form">
+          <CreateCabinForm />
+        </Modal.Window>
+    
+        <Modal.Open opens="table">
+        <Button>Table</Button>
+        </Modal.Open>
+        <Modal.Window name="table">
+          <CabinTable />
+        </Modal.Window>
+      </Modal>
+  </div>
 }
 
 // export default function AddCabin() {
